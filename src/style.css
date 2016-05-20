@@ -1,0 +1,7 @@
+.dkui-prompt {
+  font-size: 16px;
+  padding: 20px;
+  min-height: 100px; }
+  .dkui-prompt-message {
+    margin-bottom: 10px;
+    line-height: 26px; }

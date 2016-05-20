@@ -1,0 +1,48 @@
+{
+  "name": "blear.ui.prompt",
+  "version": "1.0.0",
+  "description": "操作面板弹出 UI",
+  "scripts": {
+    "live": "browser-sync start --config bs-config.js"
+  },
+  "preferGlobal": false,
+  "bin": {},
+  "engines": {
+    "node": ">=1.0.0",
+    "iojs": ">=1.0.0"
+  },
+  "main": "src/index.js",
+  "keywords": [
+    "blear",
+    "ui",
+    "actions",
+    "cloudcome",
+    "ydr.me"
+  ],
+  "author": {
+    "name": "cloudcome",
+    "email": "cloudcome@163.com",
+    "url": "http://ydr.me"
+  },
+  "contributors": [],
+  "homepage": "https://github.com/blearjs/blear.ui.prompt",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/blearjs/blear.ui.prompt"
+  },
+  "bugs": {
+    "url": "https://github.com/blearjs/blear.ui.prompt/issues"
+  },
+  "dependencies": {},
+  "peerDependencies": {
+    "blear.ui": "1.x",
+    "blear.ui.dialog": "1.x",
+    "blear.utils.object": "1.x",
+    "blear.core.selector": "1.x",
+    "blear.classes.template": "1.x"
+  },
+  "devDependencies": {
+
+  },
+  "license": "MIT"
+}
