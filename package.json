@@ -1,6 +1,6 @@
 {
   "name": "blear.ui.prompt",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "提示输入弹出框 UI",
   "scripts": {
     "live": "browser-sync start --config bs-config.js"
@@ -15,7 +15,7 @@
   "keywords": [
     "blear",
     "ui",
-    "actions",
+    "prompt",
     "cloudcome",
     "ydr.me"
   ],
