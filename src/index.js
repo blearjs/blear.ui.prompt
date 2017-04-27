@@ -8,11 +8,13 @@
 
 'use strict';
 
-var UI =       require('blear.ui');
-var Dialog =   require('blear.ui.dialog');
-var object =   require('blear.utils.object');
+var UI = require('blear.ui');
+var Dialog = require('blear.ui.dialog');
+var object = require('blear.utils.object');
+var time = require('blear.utils.time');
 var selector = require('blear.core.selector');
 var Template = require('blear.classes.template');
+
 var template = require('./template.html', 'html');
 
 var tpl = new Template(template);
@@ -31,12 +33,13 @@ var defaults = {
     surePosition: 1,
     title: '确认',
     message: '',
-    type: 'text',
+    placeholder: '',
+    value: '',
+    addClass: '',
+    inputType: 'input',
     rows: 3,
     maxLength: -1,
-    placeholder: '',
-    addClass: '',
-    value: ''
+    autoClose: true
 };
 
 var Prompt = Dialog.extend({
@@ -62,7 +65,7 @@ var Prompt = Dialog.extend({
             addClass: options.addClass,
             template: html
         });
-        the[_inputEl] = selector.query('.' + UI_CLASS + '-ipt', the.getElement())[0];
+        the[_inputEl] = selector.query('.' + UI_CLASS + '-ipt', the.getContainerEl())[0];
 
         // init event
         the.on('action', function (index) {
@@ -75,12 +78,13 @@ var Prompt = Dialog.extend({
 
                 case 1:
                     the.emit('sure', the[_inputEl].value);
+
+                    if (options.autoClose) {
+                        the.close();
+                    }
+
                     break;
             }
-        });
-
-        the.on('afterOpen', function () {
-            the[_inputEl].focus();
         });
     }
 });
