@@ -55,16 +55,12 @@ var Prompt = Dialog.extend({
 
         // init node
         var html = tpl.render({options: options});
-        Prompt.parent(the, {
-            autoFocus: false,
-            buttons: buttons,
-            closeable: false,
-            headable: true,
-            title: options.title,
-            width: options.width,
-            addClass: options.addClass,
-            template: html
-        });
+        options.autoFocus = false;
+        options.buttons = buttons;
+        options.closeable = false;
+        options.headable = false;
+        options.template = html;
+        Prompt.parent(the, options);
         the[_inputEl] = selector.query('.' + UI_CLASS + '-ipt', the.getContainerEl())[0];
 
         // init event
