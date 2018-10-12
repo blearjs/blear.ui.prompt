@@ -1,8 +1,20 @@
 <div class="blearui-prompt">
 
-    <div class="blearui-prompt-message">{{options.message}}</div>
+    <div class="blearui-prompt-message">{{=options.message}}</div>
 
-    <textarea @if="options.inputType == 'textarea'" rows="{{options.rows}}" placeholder="{{options.placeholder}}" class="dkipt blearui-prompt-ipt" maxlength="{{options.maxLength}}">{{options.value}}</textarea>
-    <input @else type="{{options.type}}" value="{{options.value}}" placeholder="{{options.placeholder}}" class="dkipt blearui-prompt-ipt" maxlength="{{options.maxLength}}">
+    {{#if options.inputType === 'textarea'}}
+    <textarea
+            rows="{{options.rows}}"
+            placeholder="{{options.placeholder}}"
+            class="dkipt blearui-prompt-ipt"
+            maxlength="{{options.maxLength}}">{{options.value}}</textarea>
+    {{#else}}
+    <input
+            type="{{options.type}}"
+            value="{{options.value}}"
+            placeholder="{{options.placeholder}}"
+            class="dkipt blearui-prompt-ipt"
+            maxlength="{{options.maxLength}}">
+    {{/if}}
 
 </div>

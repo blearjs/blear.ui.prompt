@@ -13,6 +13,11 @@
     width: 100%;
     border: 1px solid #ddd;
     padding: 6px;
+    outline: 0;
+
+    &:focus {
+      border-color: #0097ff;
+    }
   }
 }
 
