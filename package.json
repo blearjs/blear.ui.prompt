@@ -1,6 +1,6 @@
 {
   "name": "blear.ui.prompt",
-  "version": "1.0.3",
+  "version": "1.0.4",
   "description": "提示输入弹出框 UI",
   "scripts": {
     "live": "browser-sync start --config bs-config.js"
