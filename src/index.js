@@ -58,10 +58,15 @@ var Prompt = Dialog.extend({
         options.autoFocus = false;
         options.buttons = buttons;
         options.closeable = false;
-        options.headable = false;
+        options.headable = true;
         options.template = html;
         Prompt.parent(the, options);
         the[_inputEl] = selector.query('.' + UI_CLASS + '-ipt', the.getContainerEl())[0];
+
+        the.on('afterOpen', function () {
+            the[_inputEl].focus();
+            the[_inputEl].select();
+        });
 
         // init event
         the.on('action', function (index) {
