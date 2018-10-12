@@ -11,7 +11,6 @@
 var UI = require('blear.ui');
 var Dialog = require('blear.ui.dialog');
 var object = require('blear.utils.object');
-var time = require('blear.utils.time');
 var selector = require('blear.core.selector');
 var Template = require('blear.classes.template');
 
@@ -57,6 +56,7 @@ var Prompt = Dialog.extend({
         // init node
         var html = tpl.render({options: options});
         Prompt.parent(the, {
+            autoFocus: false,
             buttons: buttons,
             closeable: false,
             headable: true,
