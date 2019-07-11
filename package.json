@@ -36,7 +36,7 @@
   "dependencies": {
     "blear.classes.template": "^2.1.2",
     "blear.core.selector": "1.x",
-    "blear.ui": "1.x",
+    "blear.ui": "^1.0.12",
     "blear.ui.dialog": "^1.1.8",
     "blear.utils.object": "1.x"
   },

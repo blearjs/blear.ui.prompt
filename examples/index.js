@@ -13,7 +13,8 @@ var Prompt = require('../src/index');
 var prompt = new Prompt({
     title: '演示一下',
     message: '请输入你的姓名',
-    placeholder: '姓名'
+    placeholder: '姓名',
+    inputType: "textarea"
 });
 
 document.getElementById('btn').onclick = function () {
