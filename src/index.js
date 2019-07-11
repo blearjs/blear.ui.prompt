@@ -87,6 +87,17 @@ var Prompt = Dialog.extend({
                     break;
             }
         });
+    },
+
+    /**
+     * 设置输入框内容
+     * @param [value]
+     * @returns {Prompt}
+     */
+    setValue: function (value) {
+        var the = this;
+        the[_inputEl].value = value || '';
+        return the;
     }
 });
 var _inputEl = Prompt.sole();
